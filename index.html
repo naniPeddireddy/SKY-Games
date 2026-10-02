@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Sky Runner</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- GAME AREA -->
+
+    <div id="game">
+
+        <!-- TOP INFORMATION -->
+
+        <div class="top-bar">
+
+            <div class="score-box">
+                Score:
+                <span id="score">0</span>
+            </div>
+
+            <div class="coin-box">
+                Coins:
+                <span id="coins">0</span>
+            </div>
+
+            <div class="high-score-box">
+                Best:
+                <span id="highScore">0</span>
+            </div>
+
+        </div>
+
+
+        <!-- SKY -->
+
+        <div class="sun"></div>
+
+        <div class="cloud cloud1"></div>
+        <div class="cloud cloud2"></div>
+        <div class="cloud cloud3"></div>
+
+
+        <!-- ROAD -->
+
+        <div class="road">
+
+            <div class="lane-line line1"></div>
+            <div class="lane-line line2"></div>
+
+        </div>
+
+
+        <!-- PLAYER -->
+
+        <div id="player">
+
+            <div class="player-head"></div>
+
+            <div class="player-body"></div>
+
+            <div class="player-leg left-leg"></div>
+            <div class="player-leg right-leg"></div>
+
+        </div>
+
+
+        <!-- START SCREEN -->
+
+        <div id="startScreen"
+            class="screen">
+
+            <h1>SKY RUNNER</h1>
+
+            <p>
+                Run as far as you can!
+            </p>
+
+            <p class="instructions">
+                ← → Move
+                <br>
+                ↑ Jump
+            </p>
+
+            <button id="startButton">
+                START GAME
+            </button>
+
+        </div>
+
+
+        <!-- GAME OVER -->
+
+        <div id="gameOver"
+            class="screen">
+
+            <h1>GAME OVER</h1>
+
+            <p>
+                Score:
+                <span id="finalScore">0</span>
+            </p>
+
+            <p>
+                Coins:
+                <span id="finalCoins">0</span>
+            </p>
+
+            <p>
+                Best:
+                <span id="finalHighScore">0</span>
+            </p>
+
+            <button id="restartButton">
+                PLAY AGAIN
+            </button>
+
+        </div>
+
+
+        <!-- MOBILE CONTROLS -->
+
+        <div class="mobile-controls">
+
+            <button id="leftButton">
+                ◀
+            </button>
+
+            <button id="jumpButton">
+                ▲
+            </button>
+
+            <button id="rightButton">
+                ▶
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
