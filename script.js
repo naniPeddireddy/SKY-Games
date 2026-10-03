@@ -537,6 +537,7 @@ function checkCoinCollision(
         /* ADD COIN */
 
         coins++;
+        checkLevel();
 
 
         coinsText.innerText =
@@ -721,3 +722,69 @@ document
         "click",
         jump
     );
+
+    function checkLevel() {
+
+    let newLevel = 1;
+
+    if (score >= 2000) {
+        newLevel = 5;
+    } 
+    else if (score >= 1500) {
+        newLevel = 4;
+    } 
+    else if (score >= 1000) {
+        newLevel = 3;
+    } 
+    else if (score >= 500) {
+        newLevel = 2;
+    }
+
+    if (newLevel > level) {
+
+        level = newLevel;
+
+        levelText.innerText = level;
+
+        // Increase game speed
+        levelSpeed += 0.25;
+
+        showLevelMessage();
+    }
+}
+// MOBILE TOUCH CONTROLS
+
+let startX = 0;
+let startY = 0;
+
+document.addEventListener("touchstart", function(event) {
+
+    startX = event.touches[0].clientX;
+    startY = event.touches[0].clientY;
+
+});
+
+document.addEventListener("touchend", function(event) {
+
+    let endX = event.changedTouches[0].clientX;
+    let endY = event.changedTouches[0].clientY;
+
+    let differenceX = endX - startX;
+    let differenceY = endY - startY;
+
+    // Swipe left
+    if (differenceX < -50) {
+        moveLeft();
+    }
+
+    // Swipe right
+    else if (differenceX > 50) {
+        moveRight();
+    }
+
+    // Swipe up
+    else if (differenceY < -50) {
+        jump();
+    }
+
+});

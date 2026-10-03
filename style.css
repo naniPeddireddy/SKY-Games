@@ -555,3 +555,29 @@ body {
     }
 
 }
+
+.level {
+    margin-left: 30px;
+}
+
+#levelMessage {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 45px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 3px 3px 5px black;
+    display: none;
+    z-index: 20;
+}
+
+body {
+    touch-action: none;
+}
+
+#game {
+    touch-action: none;
+    user-select: none;
+}
